@@ -1,0 +1,54 @@
+@import "./lib/reset";
+@import "./fonts/fonts";
+@import "variables";
+@import "./components/all";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body-bg;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $body-color;
+}
+
+.container {
+  width: 100%;
+  min-width: 360px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+
+  @media (min-width: $breakpoint-sm) {
+    max-width: 540px;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 720px;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: 960px;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    max-width: 1140px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+select {
+  height: 52px;
+}

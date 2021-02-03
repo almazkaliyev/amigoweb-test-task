@@ -1,0 +1,119 @@
+.form {
+  width: 100%;
+  max-width: 460px;
+  padding: 40px 30px;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0 12px 24px rgba(44, 39, 56, .02), 0 32px 64px rgba(44, 39, 56, .04);
+
+  &__header {
+    margin-bottom: 59px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 2.125rem;
+    font-weight: 700;
+    line-height: 44px;
+  }
+
+  &__description {
+    line-height: 22px;
+  }
+
+  &__group {
+    min-height: 106px;
+    margin-bottom: .5rem;
+
+    .invalid-feedback {
+      display: block;
+      width: 100%;
+      margin-top: .5rem;
+      font-size: 14px;
+      color: $danger;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    color: $hint;
+  }
+
+  &__control {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    padding-right: 57px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    border: 1px solid #dbe2ea;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(44, 39, 56, .04);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::placeholder {
+      opacity: 1;
+      color: $secondary;
+    }
+
+    &:focus {
+      // change padding that border resizing doesn't move placeholder
+      padding-left: 15px;
+      padding-top: 15px;
+      padding-bottom: 14px;
+      border: 2px solid $primary;
+      color: $body-color;
+    }
+  }
+
+  &__check {
+    display: flex;
+    align-items: center;
+    min-height: 1.75rem;
+
+    & > &-mark {
+      flex-shrink: 0;
+      width: 1.75rem;
+      height: 1.75rem;
+      border: 1px solid #dbe2ea;
+      box-shadow: 0 4px 8px rgba(44, 39, 56, .04);
+      border-radius: 4px;
+      cursor: pointer;
+
+      svg {
+        display: none;
+      }
+    }
+
+    & > &-input:checked ~ &-mark {
+      border: 2px solid $primary;
+
+      svg {
+        display: block;
+      }
+    }
+
+    & > &-label {
+      margin-left: .5em;
+      font-size: 1rem;
+      font-weight: 500;
+      color: $hint;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $primary;
+  }
+
+  &__button {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}

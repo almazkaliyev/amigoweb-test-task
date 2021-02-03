@@ -1,0 +1,59 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["import", "eslint-plugin-import-helpers", "jsx-a11y", "prettier", "react", "react-hooks"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "comma-dangle": "off",
+    "global-require": "off",
+    "import-helpers/order-imports": ["error", {
+      "alphabetize": {
+        "ignoreCase": true,
+        "order": "asc"
+      },
+      "groups": [
+        "/^react/",
+        "module",
+        ["parent", "sibling", "index"]
+      ],
+      "newlinesBetween": "always"
+    }],
+    "no-unused-vars": "warn",
+    "no-multiple-empty-lines": ["error", {
+      "max": 1
+    }],
+    "sort-imports": ["error", {
+      "ignoreCase": true,
+      "ignoreDeclarationSort": true
+    }],
+    "jsx-a11y/label-has-associated-control": [ 2, {
+      "assert": "either"
+    }],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-max-props-per-line": ["error", {
+      "maximum": 3
+    }],
+    "react/jsx-props-no-spreading": ["error", {
+      "custom": "ignore"
+    }],
+    "react/jsx-sort-props": ["error", {
+      "ignoreCase": true
+    }],
+    "react/prop-types": "off",
+    "react/state-in-constructor": ["error", "never"]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true
+  }
+}
